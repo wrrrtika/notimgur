@@ -1,0 +1,8 @@
+<h1>PICTURES, PICTURES, PICTURES! YOU <b>WANT</b> 'EM? WE <b>GOT</b> 'EM </h1>
+<p><i>We got your uploads and downloads by the truckloads</i></p>
+
+<% @pictures.each do |picture| %>
+	<p><%= picture[:title] %>, <%= picture[:artist] %></p>
+	<img src="<%= picture[:url] %>">
+
+<% end %> 
