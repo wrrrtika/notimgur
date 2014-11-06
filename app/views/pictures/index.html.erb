@@ -2,8 +2,10 @@
 <p><i>  YOU <b>WANT</b> 'EM? WE <b>GOT</b> 'EM!!<br>
 We got your uploads and downloads by the truckloads</i></p>
 
+<%= link_to "Give us your pic!", "/pictures/new" %>
+
 <% @pictures.each do |picture| %>
 	<p><%= picture.title %>, <%= picture.artist %></p>
-	<img src="<%= picture.url %>">
+	<%= link_to image_tag(picture.url), "/pictures/#{picture.id}" %>
 
 <% end %> 
