@@ -1,0 +1,23 @@
+<h1>Edit Picture</h1>
+
+<p>
+  <%= link_to "i don't want to edit!", @picture %>
+</p>
+
+<%= form_for @picture do |f| %>
+  <p>
+    <%= f.label "Photo By:" %><br>
+    <%= f.text_field "artist" %>
+  </p>
+  <p>
+    <%= f.label "Title:" %><br>
+    <%= f.text_field "title" %>
+  </p>
+  <p>
+    <%= f.label "Image URL:" %><br>
+    <%= f.text_field "url" %>
+  </p>
+  <p>
+    <%= submit_tag "All Done!" %>
+  </p>
+<% end %>
