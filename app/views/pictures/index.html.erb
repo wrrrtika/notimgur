@@ -4,8 +4,10 @@ We got your uploads and downloads by the truckloads</i></p>
 
 <%= link_to "Give us your pic!", "/pictures/new" %>
 
-<% @pictures.each do |picture| %>
+<% @most_recent_pictures.each do |picture| %>
 	<p><%= picture.title %>, <%= picture.artist %></p>
 	<%= link_to image_tag(picture.url), "/pictures/#{picture.id}" %>
+
+<%= Picture.created_before(1.month.ago).count %>
 
 <% end %> 
